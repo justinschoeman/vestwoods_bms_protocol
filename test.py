@@ -42,7 +42,7 @@ payload is described by example in the decode functions below
 so far, the following payload types have been used.
 
 8 bit integer, one byte, only seen unsigned use
-16 bit integer, hi byte first, only signed use I have seen is battery current (-ve for discharge)
+16 bit integer, hi byte first, unsigned (with offset as described in payload decode for negative values)
 * cell voltages sometimes have a bogus high bit - no idea why, and i can not figure out how the app filters it...
 fixed length strings (always 0 padded, but no confirmation if always 0 terminated!)
 
